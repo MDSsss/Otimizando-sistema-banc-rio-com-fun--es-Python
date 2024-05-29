@@ -2,7 +2,7 @@ import textwrap
 
 
 def menu():
-    menu = """\n
+    opcao_menu = """\n
     ================ MENU ================
     [d]\tDepositar
     [s]\tSacar
@@ -12,7 +12,7 @@ def menu():
     [nu]\tNovo usuário
     [q]\tSair
     => """
-    return input(textwrap.dedent(menu))
+    return input(textwrap.dedent(opcao_menu))
 
 def depositar(saldo, valor, extrato, /):
     if valor > 0:
@@ -107,7 +107,7 @@ def main():
 
 
     while True:
-        opcao = input(menu)
+        opcao = menu()
 
         if opcao =="d":
             valor = float(input('Informe o valor do depósito: '))
